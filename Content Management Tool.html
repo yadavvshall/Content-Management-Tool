@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://127.0.0.1:5500/cnt.html?title=&content=&image=&video= -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Content Management Tool</title>
+  <link rel="stylesheet" type="text/css" href="./Content Management Tool_files/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Content Management Tool</h1>
+  </header>
+  <div class="content">
+    <h2>Welcome to Your Content Management Tool:)</h2>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" name="content" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Images</label>
+        <input type="text" id="image" name="image">
+      </div>
+      <div class="form-group">
+        <label for="video">Video Link:</label>
+        <input type="text" id="video" name="video">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Create Blog">
+      </div>
+      
+    </form>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
